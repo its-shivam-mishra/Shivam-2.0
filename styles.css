@@ -1,0 +1,325 @@
+/* ==========================================================================
+   CSS Variables for Theming & Global Settings
+   ========================================================================== */
+   :root {
+    /* Colors - Dark Theme (Default to match Ramin) */
+    --bg-color: #0a0a0a;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #f59e0b; /* Amber 500 equivalent */
+    --border: rgba(255, 255, 255, 0.1);
+    
+    /* Light Theme variants for future support */
+    --light-bg-color: #f8fafc;
+    --light-text-color: #0f172a;
+    --light-text-muted: #475569;
+    --light-primary: #ea580c;
+  }
+  
+  html.light {
+    --bg-color: var(--light-bg-color);
+    --text-color: var(--light-text-color);
+    --text-muted: var(--light-text-muted);
+    --primary: var(--light-primary);
+    --border: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ==========================================================================
+     Reset & Base Styles
+     ========================================================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .font-title {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+  
+  /* Background Overlay styling - simulates the dark radial glow */
+  .bg-overlay {
+    background: radial-gradient(circle at center, rgba(30, 41, 59, 0.4) 0%, rgba(10, 10, 10, 1) 100%);
+  }
+  
+  html.light .bg-overlay {
+    background: radial-gradient(circle at center, rgba(226, 232, 240, 0.6) 0%, rgba(248, 250, 252, 1) 100%);
+  }
+  
+  /* ==========================================================================
+     Navigation & Links
+     ========================================================================== */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    border-color: var(--primary);
+  }
+  
+  /* Burger Menu */
+  .burger-menu-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.2rem;
+    width: 2rem;
+  }
+  
+  .burger-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  /* ==========================================================================
+     Hero Text Animation (Character Typing Effect)
+     ========================================================================== */
+  .hero-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .hero-char.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Shine Animation Simulation (Optional ambient glow) */
+  @keyframes pulseGlow {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+    100% { filter: brightness(1); }
+  }
+  
+  .shine-animation-top {
+    animation: pulseGlow 8s infinite alternate ease-in-out;
+  }
+  
+  /* Summary Content Styling */
+  .summary-content strong {
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  /* Buttons */
+  .resume-btn {
+    text-align: center;
+  }
+  
+  /* Skill Pills */
+  .skill-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+  }
+  
+  .skill-pill:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+  
+  /* Utility layout classes mimicking Tailwind */
+  .fixed { position: fixed; }
+  .absolute { position: absolute; }
+  .relative { position: relative; }
+  
+  .top-0 { top: 0; }
+  .left-0 { left: 0; }
+  
+  .w-full { width: 100%; }
+  .h-full { height: 100%; }
+  .h-screen { height: 100vh; }
+  .min-h-screen { min-height: 100vh; }
+  
+  .flex { display: flex; }
+  .flex-col { flex-direction: column; }
+  .flex-row-reverse { flex-direction: row-reverse; }
+  .items-center { align-items: center; }
+  .justify-center { justify-content: center; }
+  .justify-between { justify-content: space-between; }
+  .flex-wrap { flex-wrap: wrap; }
+  
+  .gap-2 { gap: 0.5rem; }
+  .gap-3 { gap: 0.75rem; }
+  .gap-4 { gap: 1rem; }
+  
+  .z-0 { z-index: 0; }
+  .z-10 { z-index: 10; }
+  .z-30 { z-index: 30; }
+  .z-40 { z-index: 40; }
+  .z-50 { z-index: 50; }
+  
+  .pointer-events-none { pointer-events: none; }
+  .select-none { user-select: none; }
+  
+  .bg-black\/80 { background-color: rgba(0, 0, 0, 0.8); }
+  .border-b-gray-800 { border-bottom-color: #1f2937; }
+  
+  .text-gray-100 { color: #f3f4f6; }
+  .text-gray-300 { color: #d1d5db; }
+  .text-gray-400 { color: #9ca3af; }
+  .text-white { color: #ffffff; }
+  .text-center { text-align: center; }
+  
+  .font-extrabold { font-weight: 800; }
+  
+  .tracking-tight { letter-spacing: -0.025em; }
+  
+  .overflow-hidden { overflow: hidden; }
+  .overflow-y-auto { overflow-y: auto; }
+  
+  .border { border-width: 1px; }
+  .border-b { border-bottom-width: 1px; }
+  .border-t { border-top-width: 1px; }
+  .border-transparent { border-color: transparent; }
+  .border-gray-800 { border-color: #1f2937; }
+  .border-gray-600 { border-color: #4b5563; }
+  
+  .rounded { border-radius: 0.25rem; }
+  .rounded-full { border-radius: 9999px; }
+  
+  .p-3 { padding: 0.75rem; }
+  .p-5 { padding: 1.25rem; }
+  .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .px-8 { padding-left: 2rem; padding-right: 2rem; }
+  .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+  
+  .pt-5 { padding-top: 1.25rem; }
+  .pt-20 { padding-top: 5rem; }
+  .pt-24 { padding-top: 6rem; }
+  .pt-28 { padding-top: 7rem; }
+  .pt-32 { padding-top: 8rem; }
+  .pb-1 { padding-bottom: 0.25rem; }
+  .pb-20 { padding-bottom: 5rem; }
+  
+  .m-0 { margin: 0; }
+  .mt-auto { margin-top: auto; }
+  .mb-auto { margin-bottom: auto; }
+  .my-auto { margin-top: auto; margin-bottom: auto; }
+  .mt-4 { margin-top: 1rem; }
+  .mt-6 { margin-top: 1.5rem; }
+  .mt-8 { margin-top: 2rem; }
+  .mt-10 { margin-top: 2.5rem; }
+  .mb-4 { margin-bottom: 1rem; }
+  .mb-10 { margin-bottom: 2.5rem; }
+  .ml-4 { margin-left: 1rem; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  
+  .w-11\/12 { width: 91.666667%; }
+  .max-w-7xl { max-width: 80rem; }
+  .max-w-5xl { max-width: 64rem; }
+  .max-w-4xl { max-width: 56rem; }
+  .max-w-screen-md { max-width: 768px; }
+  
+  .backdrop-blur-sm { backdrop-filter: blur(4px); }
+  .backdrop-blur-md { backdrop-filter: blur(12px); }
+  
+  .bg-black { background-color: #000000; }
+  .bg-black\/50 { background-color: rgba(0, 0, 0, 0.5); }
+  .bg-white\/5 { background-color: rgba(255, 255, 255, 0.05); }
+  .bg-white\/10 { background-color: rgba(255, 255, 255, 0.1); }
+  
+  .shadow-\[0_0_15px_rgba\(245\,158\,11\,0\.5\)\] {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+  }
+  
+  .duration-200 { transition-duration: 200ms; }
+  .duration-300 { transition-duration: 300ms; }
+  .duration-500 { transition-duration: 500ms; }
+  .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  
+  .transform { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); }
+  .-translate-x-full { --tw-translate-x: -100%; transform: translateX(-100%); }
+  
+  /* text sizes */
+  .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+  .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+  .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+  .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+  .text-\[4rem\] { font-size: 4rem; }
+  .text-\[6rem\] { font-size: 6rem; }
+  .text-\[8rem\] { font-size: 8rem; }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .md\:hidden { display: none; }
+    .max-md\:hidden { display: flex; }
+    .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .md\:text-5xl { font-size: 3rem; line-height: 1; }
+    .md\:pt-10 { padding-top: 2.5rem; }
+  }
+  
+  @media (max-width: 767px) {
+    .max-md\:hidden { display: none !important; }
+    .max-md\:flex { display: flex; }
+    .mobile-dropdown-active { transform: translateX(0); }
+  }
+  
+  @media (min-width: 1024px) {
+    .lg\:pt-16 { padding-top: 4rem; }
+  }
+  
+  /* Light Mode Overrides for Utility Classes */
+  html.light .text-white { color: #0f172a; }
+  html.light .text-gray-100 { color: #1e293b; }
+  html.light .text-gray-300 { color: #334155; }
+  html.light .text-gray-400 { color: #475569; }
+  html.light .text-gray-500 { color: #64748b; }
+  
+  html.light .bg-black { background-color: #f8fafc; }
+  html.light .bg-black\/95 { background-color: rgba(248, 250, 252, 0.95); }
+  html.light .bg-black\/80 { background-color: rgba(248, 250, 252, 0.8); }
+  html.light .bg-black\/50 { background-color: rgba(248, 250, 252, 0.5); }
+  html.light .bg-black\/40 { background-color: rgba(248, 250, 252, 0.4); }
+  
+  html.light .bg-gray-900\/50 { background-color: rgba(241, 245, 249, 0.5); }
+  html.light .bg-gray-800 { background-color: #e2e8f0; }
+  html.light .bg-gray-600 { background-color: #cbd5e1; }
+  
+  html.light .bg-white\/5 { background-color: rgba(15, 23, 42, 0.05); }
+  html.light .bg-white\/10 { background-color: rgba(15, 23, 42, 0.1); }
+  
+  html.light .border-gray-800 { border-color: rgba(15, 23, 42, 0.1); }
+  html.light .border-gray-700 { border-color: rgba(15, 23, 42, 0.15); }
+  html.light .border-gray-600 { border-color: rgba(15, 23, 42, 0.2); }
+  html.light .border-gray-500 { border-color: rgba(15, 23, 42, 0.3); }
+  html.light .border-b-gray-800 { border-bottom-color: rgba(15, 23, 42, 0.1); }
+

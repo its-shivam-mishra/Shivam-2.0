@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Mishra | Senior Software Engineer</title>
+    <meta name="description" content="Shivam Mishra – Senior Software Engineer specializing in scalable web solutions.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css for simple fade instructions -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-text text-gray-100 bg-black min-h-screen">
+    
+    <!-- Background Image placeholder (using CSS in styles) -->
+    <div class="bg-overlay shine-animation-top fixed top-0 left-0 w-full h-full pointer-events-none z-0"></div>
+
+    <!-- Click Canvas -->
+    <canvas id="click-canvas" class="pointer-events-none fixed left-0 top-0 w-full h-full z-30"></canvas>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 z-50 flex w-full items-center justify-center pt-2 pb-2 md:pt-4 md:pb-4 bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <nav class="flex w-11/12 max-w-7xl flex-row-reverse items-center justify-between p-3">
+            
+            <div class="md:hidden">
+                <button title="Burger Menu" id="mobile-menu-btn" class="relative h-12 w-12 rounded-full p-5 animate__animated animate__fadeIn animate__delay-1s burger-menu-btn">
+                    <div class="burger-line top-line"></div>
+                    <div class="burger-line middle-line"></div>
+                    <div class="burger-line bottom-line"></div>
+                </button>
+            </div>
+            
+            <div class="hidden flex-col justify-center max-md:flex max-md:hidden logo-container">
+                <h3 class="text-2xl font-extrabold font-title animate__animated animate__fadeInLeft">Shivam Mishra</h3>
+                <p class="text-lg text-gray-400 animate__animated animate__fadeIn animate__delay-1s">Home</p>
+            </div>
+            
+            <ul id="nav-links-desktop" class="flex w-full items-center justify-center gap-2 text-xl max-md:hidden">
+                <!-- Staggered fade in applied via CSS/JS -->
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#journey" class="nav-link">Journey</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Me</a></li>
+                <li class="nav-item ml-4">
+                    <button id="theme-toggle" class="hover:text-amber-500 duration-200">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-dropdown" class="fixed top-0 left-0 w-full h-screen bg-black/95 z-40 transform -translate-x-full transition-transform duration-300 flex flex-col justify-center items-center">
+            <ul class="text-3xl space-y-8 text-center text-white">
+                <li><a href="#home" class="mobile-nav-link hover:text-amber-500 duration-200">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link hover:text-amber-500 duration-200">About Me</a></li>
+                <li><a href="#journey" class="mobile-nav-link hover:text-amber-500 duration-200">Journey</a></li>
+                <li><a href="#projects" class="mobile-nav-link hover:text-amber-500 duration-200">Projects</a></li>
+                <li><a href="#contact" class="mobile-nav-link hover:text-amber-500 duration-200">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="home" class="relative z-10 flex min-h-screen w-full flex-col items-center justify-start gap-2 overflow-y-auto pb-20 pt-28 md:pt-32">
+        
+        <div class="flex w-full flex-col items-center justify-center mt-auto">
+            
+            <!-- Profile Photo -->
+            <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 border-2 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)] animate__animated animate__zoomIn animate__delay-1s">
+                <img src="assets/PHOTO.png" alt="Shivam Mishra" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Hero Text Animator Container -->
+            <h1 id="hero-name" class="flex w-11/12 max-w-5xl select-none items-center justify-center overflow-hidden text-[4rem] md:text-[6rem] lg:text-[8rem] font-extrabold font-title tracking-tight text-center flex-wrap mt-0">
+                <!-- JS will inject characters here -->
+            </h1>
+            <h2 id="hero-skills" class="flex w-11/12 max-w-3xl select-none items-center justify-center overflow-hidden text-xl md:text-2xl lg:text-3xl font-semibold text-amber-500 mt-4 tracking-wider text-center flex-wrap">
+                <!-- JS will inject characters here -->
+            </h2>
+        </div>
+        
+        <div class="z-40 mb-4 mt-8 flex w-11/12 max-w-screen-md flex-col items-center justify-center gap-4 overflow-y-auto p-5 leading-relaxed backdrop-blur-sm text-lg md:text-xl text-center text-gray-300 animate__animated animate__fadeIn animate__delay-2s">
+            <div class="summary-content">
+                You meet <strong>Shivam</strong>, an <strong>AI Engineer & Senior Engineer</strong> at <strong>Coforge</strong> with over <strong>8 years</strong> of experience in the technology sector. He evolved from building robust enterprise applications in <strong>.NET and C#</strong> to designing intelligent, autonomous systems using <strong>Generative AI and LLMs</strong>. <br/><br/>
+                Currently, he specializes in <strong>Agentic AI, NLP, and RAG architectures</strong> utilizing tools like <strong>Azure AI Foundry, LangChain, and Python</strong>. Shivam is passionate about translating advanced AI research into practical business impact, bridging the gap between complex model capabilities and reliable production deployment.
+            </div>
+            
+            <a class="mt-4 border-b border-transparent text-white hover:border-amber-500 hover:text-amber-500 px-3 pb-1 duration-200 hover:px-5 inline-block transition-all" href="#about">
+                More About Shivam
+            </a>
+        </div>
+        
+        <div class="animate__animated animate__fadeIn animate__delay-3s z-40 mt-6">
+            <a target="_blank" href="assets/Shivam-Mishra-Resume.pdf" rel="noopener noreferrer" download="Shivam-Mishra-Resume.pdf" class="resume-btn relative block rounded border border-gray-600 px-8 py-3 text-xl bg-white/5 hover:bg-white/10 backdrop-blur-md transition-all duration-500 hover:border-amber-500 hover:shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+                Download Resume
+            </a>
+        </div>
+    </main>
+    
+    <!-- Placeholder Sections below for GSAP to scroll to. Content will be expanded later. -->
+    <section id="about" class="min-h-screen relative z-10 flex flex-col items-center justify-center py-20 bg-black/50 backdrop-blur-sm border-t border-gray-800">
+        <div class="max-w-4xl w-11/12 mx-auto text-center scroll-fade-up">
+            <h2 class="text-4xl md:text-5xl font-title font-extrabold mb-10 text-white">More About Me</h2>
+            <p class="text-xl text-gray-300 leading-relaxed mb-10">I am an AI Engineer based in Faizabad, Uttar Pradesh, India. Beyond just writing code, I love designing autonomous systems and solving complex architectural problems using state-of-the-art Generative AI.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Generative AI</span>
+                <span class="skill-pill">Large Language Models (LLMs)</span>
+                <span class="skill-pill">Agentic AI</span>
+                <span class="skill-pill">NLP</span>
+                <span class="skill-pill">RAG Architectures</span>
+                <span class="skill-pill">Azure AI Foundry</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">.NET / C#</span>
+                <span class="skill-pill">Computer Vision</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Journey Section -->
+    <section id="journey" class="min-h-screen relative z-10 flex flex-col items-center py-20 border-t border-gray-800">
+        <div class="max-w-4xl w-11/12 mx-auto scroll-fade-up">
+            <h2 class="text-4xl md:text-5xl font-title font-extrabold mb-12 text-center text-white">My Journey</h2>
+            
+            <div class="space-y-12 border-l-2 border-gray-700 ml-3 md:ml-0 pl-8 md:pl-12 py-4">
+                
+                <!-- Role 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[42px] md:-left-[58px] top-1 h-5 w-5 rounded-full border-4 border-black bg-amber-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white">Senior Engineer</h3>
+                        <span class="text-amber-500 text-sm md:text-base font-semibold tracking-wide">Oct 2021 – Present</span>
+                    </div>
+                    <h4 class="text-xl text-gray-400 mb-4">Coforge</h4>
+                    <p class="text-gray-300 leading-relaxed">Developing autonomous agents and recommendation systems. Bridging the gap between complex AI models and reliable production deployment using Azure AI Foundry and LangChain.</p>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[42px] md:-left-[58px] top-1 h-5 w-5 rounded-full border-4 border-black bg-gray-600 group-hover:bg-amber-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white">Software Engineer</h3>
+                        <span class="text-gray-500 text-sm md:text-base font-semibold tracking-wide">Jan 2020 – Sep 2021</span>
+                    </div>
+                    <h4 class="text-xl text-gray-400 mb-4">HELM360</h4>
+                    <p class="text-gray-300 leading-relaxed">Built robust enterprise solutions and continued integrating intelligent systems into core products.</p>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="relative group">
+                    <div class="absolute -left-[42px] md:-left-[58px] top-1 h-5 w-5 rounded-full border-4 border-black bg-gray-600 group-hover:bg-amber-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white">Software Engineer</h3>
+                        <span class="text-gray-500 text-sm md:text-base font-semibold tracking-wide">Jan 2019 – Jan 2020</span>
+                    </div>
+                    <h4 class="text-xl text-gray-400 mb-4">Chetu, Inc.</h4>
+                    <p class="text-gray-300 leading-relaxed">Developed backend systems and web applications across various domains, heavily utilizing .NET frameworks.</p>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="relative group">
+                    <div class="absolute -left-[42px] md:-left-[58px] top-1 h-5 w-5 rounded-full border-4 border-black bg-gray-600 group-hover:bg-amber-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white">Software Engineer</h3>
+                        <span class="text-gray-500 text-sm md:text-base font-semibold tracking-wide">Jan 2018 – Dec 2018</span>
+                    </div>
+                    <h4 class="text-xl text-gray-400 mb-4">Wildnet Technologies</h4>
+                    <p class="text-gray-300 leading-relaxed">Early career focusing on designing and developing enterprise applications in .NET and C#.</p>
+                </div>
+                
+                <!-- Education -->
+                <div class="relative group">
+                    <div class="absolute -left-[42px] md:-left-[58px] top-1 h-5 w-5 rounded-full border-4 border-black bg-gray-600 group-hover:bg-amber-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="text-2xl font-bold text-white">B.Tech, Information Technology</h3>
+                        <span class="text-gray-500 text-sm md:text-base font-semibold tracking-wide">2011 – 2015</span>
+                    </div>
+                    <h4 class="text-xl text-gray-400">Govt Engg college Banda</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section Placeholder -->
+    <section id="projects" class="min-h-screen relative z-10 flex flex-col items-center py-20 bg-black/40 backdrop-blur-sm border-t border-gray-800">
+        <div class="max-w-6xl w-11/12 mx-auto scroll-fade-up">
+            <h2 class="text-4xl md:text-5xl font-title font-extrabold mb-12 text-center text-white">Selected Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-lg p-6 hover:border-amber-500 transition-colors duration-300 group">
+                    <div class="h-40 bg-gray-800 rounded mb-6 overflow-hidden relative">
+                        <!-- Placeholder Image -->
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop" alt="AI Agent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-amber-500 transition-colors">Autonomous Agent</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Developed autonomous agents using LangChain and Python to automate complex multi-step workflows with high reliability.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">Python</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">LangChain</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">LLMs</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-lg p-6 hover:border-amber-500 transition-colors duration-300 group">
+                    <div class="h-40 bg-gray-800 rounded mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1678286915833-8a39ec8c6b75?q=80&w=600&auto=format&fit=crop" alt="RAG Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-amber-500 transition-colors">Enterprise RAG System</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Engineered a scalable Retrieval-Augmented Generation (RAG) architecture integrating internal document silos securely via Azure AI Foundry.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">Azure AI</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">RAG</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">Vector DB</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-lg p-6 hover:border-amber-500 transition-colors duration-300 group">
+                    <div class="h-40 bg-gray-800 rounded mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=600&auto=format&fit=crop" alt="Recommendation Engine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-amber-500 transition-colors">Recommendation Engine</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Designed an intelligent recommendation system using Natural Language Processing to translate complex research into practical business impact.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">NLP</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">.NET / C#</span>
+                        <span class="bg-gray-800 px-2 py-1 rounded text-gray-300">Data Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Placeholder -->
+    <section id="contact" class="min-h-screen relative z-10 flex flex-col items-center justify-center py-20 border-t border-gray-800">
+        <div class="max-w-2xl w-11/12 mx-auto text-center scroll-fade-up">
+            <h2 class="text-4xl md:text-5xl font-title font-extrabold mb-6 text-white">Get In Touch</h2>
+            <p class="text-xl text-gray-300 mb-10">I'm currently available for a new challenge or collaboration natively involving GenAI, LangChain, or system design. Feel free to shoot me an email!</p>
+            
+            <a href="mailto:shivammishr007@gmail.com" class="inline-block border border-gray-500 hover:border-amber-500 hover:text-amber-500 text-white px-8 py-4 rounded-full text-xl transition-all duration-300 mb-12 shadow-[0_0_0_rgba(245,158,11,0)] hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                Say Hello <i class="fas fa-paper-plane ml-2"></i>
+            </a>
+
+            <div class="flex justify-center gap-6 text-2xl text-gray-400">
+                <a href="https://www.linkedin.com/in/shivam-mishra-92199892" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition-colors duration-200">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:shivammishr007@gmail.com" class="hover:text-amber-500 transition-colors duration-200">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
