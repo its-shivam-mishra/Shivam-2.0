@@ -226,4 +226,76 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // ==========================================================================
+    // Mouse Following Cat
+    // ==========================================================================
+    const mouseCat = document.getElementById('mouse-cat');
+    if (mouseCat) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let catX = mouseX;
+        let catY = mouseY;
+        let catFaceDirection = 1;
+        
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (mouseCat.style.opacity === '0' || mouseCat.style.opacity === '') {
+                mouseCat.style.opacity = '1';
+                catX = mouseX;
+                catY = mouseY;
+            }
+        });
+
+        document.addEventListener('mouseleave', () => {
+            mouseCat.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', () => {
+            mouseCat.style.opacity = '1';
+        });
+
+        const updateCatPos = () => {
+            const dx = mouseX - catX;
+            const dy = mouseY - catY;
+            
+            catX += dx * 0.15;
+            catY += dy * 0.15;
+
+            if (dx > 1) {
+                catFaceDirection = 1;
+            } else if (dx < -1) {
+                catFaceDirection = -1;
+            }
+
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            let scaleY = 1;
+            let stretchX = 1;
+
+            if (distance > 3) {
+                // Add walking animation class
+                mouseCat.classList.add("walking");
+                
+                // Squash and stretch when moving fast
+                if (distance > 20) {
+                    scaleY = 0.85;
+                    stretchX = 1.15;
+                }
+            } else {
+                // Remove walking animation class when static
+                mouseCat.classList.remove("walking");
+            }
+
+            // Offset from cursor
+            const offsetX = 15;
+            const offsetY = 15;
+
+            // Translate then scale (no manual rotation needed for sprite)
+            mouseCat.style.transform = `translate(${catX + offsetX}px, ${catY + offsetY}px) scale(${catFaceDirection * stretchX}, ${scaleY})`;
+            
+            requestAnimationFrame(updateCatPos);
+        };
+        updateCatPos();
+    }
 });

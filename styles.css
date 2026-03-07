@@ -323,3 +323,19 @@
   html.light .border-gray-500 { border-color: rgba(15, 23, 42, 0.3); }
   html.light .border-b-gray-800 { border-bottom-color: rgba(15, 23, 42, 0.1); }
 
+/* ==========================================================================
+   Mouse Cat Styles
+   ========================================================================== */
+#mouse-cat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.5rem;
+  color: var(--primary);
+  will-change: transform;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
