@@ -1,0 +1,206 @@
+Shivam mishra 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+. 
+CONTACT 
+ 
+ 
+ 
+ 
+ 
+ 
+SKILLS 
+• Python 
+• GEN AI 
+• LLM 
+• LangChain 
+• LangGraph 
+• Azure AI Foundry 
+• Azure AI Search, 
+• Azure Functions 
+• Azure Cosmos DB 
+• MLOPS 
+• Scikit-learn 
+• Pandas 
+• Numpy 
+• Artificial Intelligence 
+• NLP 
+• GIT 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+      CERTIFICATIONS: 
+ 
+1. Azure Developer 
+Associate (AZ-204) 
+2. Azure 
+Fundamentals(AZ-
+900) 
+ 
+Generative AI Engineer & Senior Software Engineer 8+ years of software 
+engineering experience, combining a strong foundation in C#/.NET and Azure 
+with 1.5+ years of specialized expertise in Generative AI and Agentic Systems. 
+Proven track record of leveraging deep backend knowledge to architect scalable 
+RAG pipelines and autonomous agents using LangChain, Pinecone Vector 
+Database, Microsoft Copilot Studio, and Azure AI Foundry. Expert in bridging 
+the gap between traditional enterprise architecture and next-generation AI, 
+delivering high-value solutions. 
+ 
+ 
+Professional Experience in Detail 
+GENAI Projects 
+AI-Driven Weather Hazard Intelligence Platform  
+• Built a RAG-based GenAI system to predict location-specific weather 
+hazards and enrich insurance FNOL and claims workflows. 
+• Developed LangChain agents with custom tools for weather data, policy 
+context, and claims enrichment, orchestrated using LangGraph for stateful 
+multi-step workflows. 
+• Integrated Azure OpenAI, Azure Functions, Blob Storage, and Cognitive 
+Search (Vector Search) for scalable, serverless GenAI deployment.  
+• Enabled context-aware conversations, proactive alerts, and risk-based 
+add-on recommendations with secure access using Azure AD and 
+Managed Identity. 
+ 
+AI Insurance Assistant with LangChain Agents 
+• Developed an intelligent insurance assistant using LangChain agents and 
+custom tools for policy queries, claim status lookup, and document 
+tracking. 
+• Automated multi-step workflows, integrating database queries, email 
+generation, and compliance checks to streamline insurance operations. 
+Enabled context-aware, multi-turn conversations with memory retention to 
+handle complex insurance scenarios 
+Doc Intelligent Q&A System 
+• Designed and implemented a Retrieval-Augmented Generation (RAG) 
+pipeline using LangChain and vector databases for semantic document 
+search. 
+• Integrated LLMs to generate context-aware, accurate answers from 
+enterprise documents. 
+• Built an end-to-end solution covering ingestion, chunking, embedding, 
+retrieval, and answer synthesis, improving knowledge accessibility and 
+reducing manual search time. 
+ 
+PDF Data Extraction with Azure Foundry 
+• Built a pipeline in Azure Foundry to extract structured data (text, images, 
+and tables) from PDF files and convert them into JSON format using 
+cognitive services and Foundry’s workflow tools. 
+• Automated manual data entry for reports, reducing processing time by 
+and improving data accuracy for downstream analytics. 
+ Grater Noida, India 
+ 
+ +91750510675 
+ 
+ its.shivammishr@gmail.com 
+ 
+
+ 
+CUSTOM SECTION: 
+LinkedIn Profile:  
+https://www.linkedin.co
+m/in/shivam-mishra-
+92199892 
+         Automated Data Extraction Pipeline  
+• Built a data extraction and transformation pipeline using Azure Foundry 
+& Microsoft Copilot Studio to ingest semi-structured data (CSV/JSON) 
+from cloud storage. 
+• Implemented automated cleansing and transformation rules before loading 
+into a Snowflake warehouse for downstream analytics. 
+• Improved data processing efficiency, reducing manual intervention and 
+enabling faster insights. 
+Backend .NET Experience – Cloud Solutions, API Development  
+ 
+• Spearheaded full-stack development across Legal, E-commerce, and 
+Healthcare domains, designing scalable architectures using ASP.NET 
+Core, MVC, and Angular. 
+• Implemented robust cloud-native solutions on Microsoft Azure, 
+utilizing Azure App Services, Azure Functions, and Azure Active 
+Directory to ensure secure and scalable application deployment. 
+• Developed and consumed RESTful WebAPIs to support mobile and 
+web clients, while integrating real-time communication features using 
+SignalR (WebSockets) for live tracking and correspondence systems.  
+• Conducted in-depth project analysis and requirement gathering, 
+creating technical specifications and high-level designs for compliance-
+driven e-commerce and inventory management platforms. 
+• Optimized front-end interactions using JavaScript and jQuery within 
+Visual Studio environments, delivering responsive solutions for both 
+Web applications. 
+ 
+ 
+ 
+Work Experience 
+● Coforge ltd (Oct 2021 - Current) 
+● Helm Analytics Pvt. Ltd. (Jan-2020 – Sep 2021) 
+● Chetu India Pvt. Ltd. (Feb 2019 - Jan 2020) 
+● Wildnet Technologies Pvt. Ltd.  (Jan 2017 - Feb 2019) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+. 
+#HR J#64 e4 f1 f5-2 49 d-49 1 8-b d8 b-1 97 3 52 b c0 bdf# 
