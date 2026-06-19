@@ -238,6 +238,51 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
+
+  .contact-action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    color: #f8fafc;
+    transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .contact-card i {
+    font-size: 1.75rem;
+    color: var(--primary);
+    min-width: 2rem;
+  }
+
+  .contact-card-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: #f8fafc;
+  }
+
+  .contact-card-text {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
   
   /* Utility layout classes mimicking Tailwind */
   .fixed { position: fixed; }
